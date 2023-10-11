@@ -1,8 +1,21 @@
 // complete this js code
-function Person(name, age) {}
+function Person(name, age) {
+	console.log(`Hello, my name is ${name}, I am ${age} years old`)
+}
 
-function Employee(name, age, jobTitle) {}
+const Person = Object.create(Person);
+Person.name = 'Alice';
+Person.age = 14;
+Person.greet();
 
-// Do not change code below this line
+function Employee(name, age, jobTitle) {
+	console.log(`Hello, my name is ${name}, I am ${age} years old , and my job title is ${jobTitle}`)
+}
+
+const Employee = Object.create(Employee);
+Employee.name = 'Alice';
+Employee.age = 14;
+Employee.Employee();
+
 window.Person = Person;
 window.Employee = Employee;
