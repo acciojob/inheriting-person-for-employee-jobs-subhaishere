@@ -1,21 +1,23 @@
 // complete this js code
 function Person(name, age) {
-	console.log(`Hello, my name is ${name}, I am ${age} years old`)
+	this.name  = name;
+	this.age  = age;
 }
-
-const Person = Object.create(Person);
-Person.name = 'Alice';
-Person.age = 14;
-Person.greet();
 
 function Employee(name, age, jobTitle) {
-	console.log(`Hello, my name is ${name}, I am ${age} years old , and my job title is ${jobTitle}`)
+	this.name  = name;
+	this.age = age;
+	this.jobTitle = jobTitle;
 }
 
-const Employee = Object.create(Employee);
-Employee.name = 'Alice';
-Employee.age = 14;
-Employee.Employee();
+Person.prototype.greet= function(){
+	console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`)
+	alert(`Hello, my name is ${this.name}, I am ${this.age} years old.`)
+}
 
+Employee.prototype.jobGreet = function(){
+	console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
+} 
+// Do not change code below this line
 window.Person = Person;
 window.Employee = Employee;
